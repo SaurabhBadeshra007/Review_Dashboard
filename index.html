@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review  Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <h2>SellerGrid</h2>
+
+            <ul>
+                <li class="active">Dashboard</li>
+                <a href="#reviewsTable">
+
+                    <li>Reviews</li>
+                </a>
+
+                <a href="#platformFilter">
+
+                    <li>Analytics</li>
+                </a>
+                <a href="">
+
+                    <li>Settings</li>
+                </a>
+            </ul>
+        </div>
+
+        <!-- MAIN -->
+        <div class="main">
+
+            <h1>AI Review Intelligence Dashboard</h1>
+
+            <!-- CARDS -->
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Total Reviews</h3>
+                    <p id="totalReviews">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Positive Reviews</h3>
+                    <p id="positiveReviews">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Negative Reviews</h3>
+                    <p id="negativeReviews">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Average Rating</h3>
+                    <p id="avgRating">0</p>
+                </div>
+
+            </div>
+
+            <!-- FILTERS -->
+            <div class="filters">
+
+                <select id="platformFilter">
+                    <option value="All">All Platforms</option>
+                    <option value="Amazon">Amazon</option>
+                    <option value="Flipkart">Flipkart</option>
+                    <option value="Website">Website</option>
+                    <option value="Playstore">Playstore</option>
+                </select>
+
+                <select id="ratingFilter">
+                    <option value="All">All Ratings</option>
+                    <option value="5">5 Star</option>
+                    <option value="4">4 Star</option>
+                    <option value="3">3 Star</option>
+                    <option value="2">2 Star</option>
+                    <option value="1">1 Star</option>
+                </select>
+
+            </div>
+
+            <!-- CHART -->
+            <div class="chart-box">
+                <canvas id="ratingChart"></canvas>
+            </div>
+
+            <!-- REVIEWS TABLE -->
+            <div class="table-box">
+                <h2>All Reviews</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Customer</th>
+                            <th>Platform</th>
+                            <th>Rating</th>
+                            <th>Review</th>
+                            <th>Sentiment</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="reviewsTable"></tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
